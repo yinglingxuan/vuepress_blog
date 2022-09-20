@@ -2,7 +2,7 @@ module.exports = {
   "title": "Sakura",
   "description": "Sakura,前端开发工程师。",
   "dest": "dist",
-  "base":'./',
+  "base":'/',
   "head": [
     [
       "link",
