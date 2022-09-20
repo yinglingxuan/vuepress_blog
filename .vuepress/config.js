@@ -1,7 +1,8 @@
 module.exports = {
   "title": "Sakura",
-  "description": "Sakura,是一个关注于互联网、IT技术经验分享的个人独立博客。专注于IT行业最前沿的技术。致力成为互联网上最个性、最极客、具传播力的个人独立博客。",
+  "description": "Sakura,前端开发工程师。",
   "dest": "dist",
+  "base":'./',
   "head": [
     [
       "link",
