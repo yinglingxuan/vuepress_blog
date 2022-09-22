@@ -1195,6 +1195,11 @@
   resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-back-to-top/download/@vuepress-reco/vuepress-plugin-back-to-top-1.5.5.tgz"
   integrity sha1-d54fPKIrq+NWgSN2D1Ow3JOGlgI=
 
+"@vuepress-reco/vuepress-plugin-bgm-player@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@vuepress-reco/vuepress-plugin-bgm-player/-/vuepress-plugin-bgm-player-1.1.4.tgz#c3107cb097f323a986ac6004b3dfb556901e74f5"
+  integrity sha512-DPSTwyAKmgBu6607D7PzM0ZlW5g5TuMZPEGmSKS50AIvSTFL5AO0J33NQFT63jqVKJhKmjZ0kDB8dtegPYaNlg==
+
 "@vuepress-reco/vuepress-plugin-comments@^1.4.6":
   version "1.4.6"
   resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-comments/download/@vuepress-reco/vuepress-plugin-comments-1.4.6.tgz"

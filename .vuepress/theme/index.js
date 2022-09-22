@@ -20,7 +20,6 @@ module.exports = (options, ctx) => ({
 
   plugins: [
     '@vuepress-reco/extract-code',
-    ["vuepress-plugin-cat"],
     '@vuepress-reco/back-to-top',
     '@vuepress-reco/loading-page',
     '@vuepress-reco/pagation',
@@ -140,13 +139,13 @@ module.exports = (options, ctx) => ({
       shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
       zIndex: 999999999, // z-index property of the canvas, default: 999999999
     }],
-    ['dynamic-title', {
-      showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-      showText: '客官欢迎回来~',
-      hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-      hideText: '客官不要走嘛~',
-      recoverTime: 2000,
-    }],
+    // ['dynamic-title', {
+    //   showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+    //   showText: '客官欢迎回来~',
+    //   hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
+    //   hideText: '客官不要走嘛~',
+    //   recoverTime: 2000,
+    // }],
     ["sakura", {  //樱花插件
       num: 20,  // 默认数量
       show: true, //  是否显示
@@ -189,9 +188,9 @@ module.exports = (options, ctx) => ({
       'dynamic-title',
       {
          showIcon: '/favicon.ico',
-         showText: '(/≧▽≦/)咦！又好了！',
+         showText: '(/≧▽≦/)努力加油中！',
          hideIcon: '/failure.ico',
-         hideText: '(●—●)喔哟，崩溃啦！',
+         hideText: '(●—●)喔哟，你快回来吧！',
          recoverTime: 2000,
       },
     ],
@@ -219,8 +218,8 @@ module.exports = (options, ctx) => ({
         model: 'tororo',
         display: {
           position: "right", // 显示位置：left/right(default: 'right')
-          width: 135, // 模型的长度(default: 135)
-          height: 300, // 模型的高度(default: 300)
+          width: 195, // 模型的长度(default: 135)
+          height: 345, // 模型的高度(default: 300)
           hOffset: 65, //  水平偏移(default: 65)
           vOffset: 0, //  垂直偏移(default: 0)
         },
@@ -233,14 +232,6 @@ module.exports = (options, ctx) => ({
       }
     }],
     ['go-top'],
-    // [
-    //   "vuepress-plugin-live2d",
-    //   {
-    //     modelName: ["tororo","z16","Epsilon2.1","izumi","koharu","shizuku","miku","hijiki",],
-    //     mobileShow: false,
-    //     position: "right"
-    //   }
-    // ],
     ['permalink-pinyin', {
       lowercase: true, // Converted into lowercase, default: true
       separator: '-' // Separator of the slug, default: '-'

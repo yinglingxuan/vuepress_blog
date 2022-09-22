@@ -11,6 +11,7 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.4",
     "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "glob": "^7.1.6",
     "mime": "^2.4.4",
