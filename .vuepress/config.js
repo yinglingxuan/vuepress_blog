@@ -73,9 +73,10 @@ module.exports = {
       },
     ],
     "valineConfig": {
-      "appId": "xxx",// your appId
-      "appKey": "xxx", // your appKey
-      "avatar": "", //
+      "appId": "ZUjokCkNy37fPqbQlTl6DCPQ-gzGzoHsz",// your appId
+      "appKey": "VpWiJ97YPdqM1I8qoZStazOP", // your appKey
+      "avatar": "wavatar", //
+      "visitor": true, 
       "enableQQ": true, //启用昵称框自动获取QQ昵称和QQ头像
       "requiredFields": ['nick', 'mail'], //设置必填项
     },
