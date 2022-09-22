@@ -25,7 +25,7 @@
           </p>
         </ModuleTransition>
         <ModuleTransition delay="0.08" duration="0.5">
-          <h2>{{typewriter}}</h2>
+          <h2 class="type_writer">{{typewriter}}</h2>
         </ModuleTransition>
         
 
@@ -182,7 +182,7 @@
               this.typewriter = this.str.slice(0, this.i++)
               this.timer = setTimeout(() => {
                   this.typeing()
-              }, 200)
+              }, 150)
           } else { // 如果等于0.那么久重新获取
             setTimeout(() => {
               this.i = 0
@@ -232,6 +232,12 @@
     text-align: center
     color: white
     transition-duration: .3s;
+  }
+  .type_writer{
+    position: absolute;
+    text-align: left;
+    left:50%;
+    transform: translateX(-50%)
   }
 
   .home-blog {

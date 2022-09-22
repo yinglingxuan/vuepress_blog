@@ -173,7 +173,7 @@ module.exports = (options, ctx) => ({
         // 到达屏幕另一侧的速度有多快
         horizontalSpeed: 200,
         // 在任何给定时间，屏幕上会保留多少条带
-        ribbonCount: 2,
+        ribbonCount: 5,
         // 添加笔划以及色带填充颜色
         strokeSize: 0,
         // 通过页面滚动上的因子垂直移动色带
