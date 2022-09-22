@@ -16,6 +16,7 @@
           <h1 v-if="recoShowModule && $frontmatter.heroText !== null" class="longcang">
             {{ motto.zh || $frontmatter.heroText || $title || 'zealsay' }}
           </h1>
+          
         </ModuleTransition>
 
         <ModuleTransition delay="0.08" duration="0.5">
@@ -23,6 +24,10 @@
             {{ motto.en || $frontmatter.tagline || $description || 'Welcome to your zealsay site' }}
           </p>
         </ModuleTransition>
+        <ModuleTransition delay="0.08" duration="0.5">
+          <h2>{{typewriter}}</h2>
+        </ModuleTransition>
+        
 
         <a href="#anchor" class="scroll-down bounce-enter-active down-arrow"></a>
       </div>
@@ -88,7 +93,33 @@
         recoShow: false,
         currentPage: 1,
         tags: [],
-        motto:[]
+        motto: [],
+        typewriter: '',
+        i: 0,
+        timer: 0,
+        str: '',
+        strArr: [
+          "真正的成功源于生命里的学习，成长和热爱，以及不停步。",
+          "自己的命运自己掌控，脚下的路不停步。",
+          "即使爬到最高的山上，一次也只能脚踏实地地迈一步。",
+          "未来属于那些相信梦想，并愿意为之付诸行动的人。",
+          "每一次跌倒都是为了华丽的站起来。",
+          "没有任何信念的人，就会失去所有",
+          "想要做到不可替代，你就必须与众不同。",
+          "其实，我们并不在同一起跑线，尽力就好。",
+          "为了梦想，一路狂奔。",
+          "自己选择的路，再难也要，勇敢的走下去。",
+          "如果你觉得现在走的辛苦，那就证明你在走上坡路。",
+          "愿意做别人不愿意做的事，便能达到别人达不成的事。",
+          "运气只是当机会来临时，你已为它准备好。",
+          "原地踏步还是跑遍世界，选择权在你手里。",
+          "每一点滴的进展，都是缓慢而艰苦的。",
+          "坚持是成功的一大要素。",
+          "青春不停步，不停进步。",
+          "不要只懂生存，不懂生活。",
+          "飞不动就跑，跑不动就走，走不动就爬。",
+          "不经历风雨长不成大树。",
+        ]
       }
     },
     computed: {
@@ -139,11 +170,29 @@
       this.recoShow = true
       this._setPage(this._getStoragePage())
       AOS.init()
+      this.str = this.strArr[Math.floor(Math.random() * this.strArr.length)]
+      this.typeing()
       setInterval(() => {
         this.qieHuan()
       },10000)
     },
-    methods: {
+  methods: {
+      typeing() {
+          if (this.i <= this.str.length) {
+              this.typewriter = this.str.slice(0, this.i++)
+              this.timer = setTimeout(() => {
+                  this.typeing()
+              }, 200)
+          } else { // 如果等于0.那么久重新获取
+            setTimeout(() => {
+              this.i = 0
+              this.str = this.strArr[Math.floor(Math.random() * this.strArr.length)]
+              this.typeing()
+            },3000)
+              // clearTimeout(this.timer)
+          }
+      },
+
       // 获取当前页码
       getCurrentPage(page) {
         this._setPage(page)

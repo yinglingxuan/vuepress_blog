@@ -19,7 +19,8 @@ module.exports = (options, ctx) => ({
   },
 
   plugins: [
-    "vuepress-plugin-cat",
+    '@vuepress-reco/extract-code',
+    ["vuepress-plugin-cat"],
     '@vuepress-reco/back-to-top',
     '@vuepress-reco/loading-page',
     '@vuepress-reco/pagation',
@@ -128,12 +129,12 @@ module.exports = (options, ctx) => ({
         autoplay:true,
       }
     ],
-    [
-      '@vuepress-reco/vuepress-plugin-kan-ban-niang',
-      {
-        theme: ['whiteCat','blackCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
-      }
-    ],
+    // [
+    //   '@vuepress-reco/vuepress-plugin-kan-ban-niang',
+    //   {
+    //     theme: ['whiteCat','blackCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
+    //   }
+    // ],
     ['cursor-effects', {
       size: 2, // size of the particle, default: 2
       shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
@@ -145,6 +146,104 @@ module.exports = (options, ctx) => ({
       hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
       hideText: '客官不要走嘛~',
       recoverTime: 2000,
-   }]
+    }],
+    ["sakura", {  //樱花插件
+      num: 20,  // 默认数量
+      show: true, //  是否显示
+      zIndex: 99999999999,   // 层级
+      img: {
+        replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
+        httpUrl: '...'     // 绝对路径
+      }     
+    }],
+    ["ribbon-animation", {
+      size: 90,   // 默认数据
+      opacity: 0.3,  //  透明度
+      zIndex: 999999999999,   //  层级
+      opt: {
+        // 色带HSL饱和度
+        colorSaturation: "80%",
+        // 色带HSL亮度量
+        colorBrightness: "60%",
+        // 带状颜色不透明度
+        colorAlpha: 0.65,
+        // 在HSL颜色空间中循环显示颜色的速度有多快
+        colorCycleSpeed: 6,
+        // 从哪一侧开始Y轴 (top|min, middle|center, bottom|max, random)
+        verticalPosition: "center",
+        // 到达屏幕另一侧的速度有多快
+        horizontalSpeed: 200,
+        // 在任何给定时间，屏幕上会保留多少条带
+        ribbonCount: 2,
+        // 添加笔划以及色带填充颜色
+        strokeSize: 0,
+        // 通过页面滚动上的因子垂直移动色带
+        parallaxAmount: -0.5,
+        // 随着时间的推移，为每个功能区添加动画效果
+        animateSections: true
+      },
+      ribbonShow: false, //  点击彩带  true显示  false为不显示
+      ribbonAnimationShow: true  // 滑动彩带
+    }],
+    [
+      'dynamic-title',
+      {
+         showIcon: '/favicon.ico',
+         showText: '(/≧▽≦/)咦！又好了！',
+         hideIcon: '/failure.ico',
+         hideText: '(●—●)喔哟，崩溃啦！',
+         recoverTime: 2000,
+      },
+    ],
+    ["vuepress-plugin-nuggets-style-copy", {
+      copyText: "复制代码",
+      tip: {
+          content: "复制成功"
+      }
+    }],
+    [
+      'copyright',
+      {
+        authorName: 'sakura', // 选中的文字将无法被复制
+        minLength: 30, // 如果长度超过  30 个字符
+      },
+    ],
+    ['vuepress-plugin-helper-live2d',{
+      // 是否开启控制台日志打印(default: false)
+      log: false,
+      live2d: {
+        // 是否启用(关闭请设置为false)(default: true)
+        enable: true,
+        // 模型名称(default: hibiki)>>>取值请参考：
+        // https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA
+        model: 'tororo',
+        display: {
+          position: "right", // 显示位置：left/right(default: 'right')
+          width: 135, // 模型的长度(default: 135)
+          height: 300, // 模型的高度(default: 300)
+          hOffset: 65, //  水平偏移(default: 65)
+          vOffset: 0, //  垂直偏移(default: 0)
+        },
+        mobile: {
+          show: false // 是否在移动设备上显示(default: false)
+        },
+        react: {
+          opacity: 1 // 模型透明度(default: 0.8)
+        }
+      }
+    }],
+    ['go-top'],
+    // [
+    //   "vuepress-plugin-live2d",
+    //   {
+    //     modelName: ["tororo","z16","Epsilon2.1","izumi","koharu","shizuku","miku","hijiki",],
+    //     mobileShow: false,
+    //     position: "right"
+    //   }
+    // ],
+    ['permalink-pinyin', {
+      lowercase: true, // Converted into lowercase, default: true
+      separator: '-' // Separator of the slug, default: '-'
+    }]
   ]
 })
