@@ -19,6 +19,7 @@ module.exports = (options, ctx) => ({
   },
 
   plugins: [
+    "vuepress-plugin-cat",
     '@vuepress-reco/back-to-top',
     '@vuepress-reco/loading-page',
     '@vuepress-reco/pagation',
@@ -130,7 +131,7 @@ module.exports = (options, ctx) => ({
     [
       '@vuepress-reco/vuepress-plugin-kan-ban-niang',
       {
-        theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
+        theme: ['whiteCat','blackCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
       }
     ],
     ['cursor-effects', {
