@@ -181,7 +181,7 @@ module.exports = (options, ctx) => ({
         // 随着时间的推移，为每个功能区添加动画效果
         animateSections: true
       },
-      ribbonShow: false, //  点击彩带  true显示  false为不显示
+      ribbonShow: true, //  点击彩带  true显示  false为不显示
       ribbonAnimationShow: true  // 滑动彩带
     }],
     [

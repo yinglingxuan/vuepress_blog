@@ -32,7 +32,11 @@
         <a href="#anchor" class="scroll-down bounce-enter-active down-arrow"></a>
       </div>
     </div>
-
+    <div>
+      <Springbili></Springbili>
+      <!-- <Autumnbili></Autumnbili> -->
+       <!-- <Winterbili></Winterbili> -->
+    </div>
     <ModuleTransition delay="0.16">
       <div id="anchor" v-show="recoShowModule" class="home-blog-wrapper">
         <div class="blog-list">
@@ -83,11 +87,13 @@
   import PersonalInfo from '@theme/components/PersonalInfo'
   import {getOneColor} from '@theme/helpers/other'
   import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
+  import Springbili from '@theme/components/Springbili.vue'
+  //  import Winterbili from '@theme/components/Winterbili.vue'
   import AOS from 'aos'
 
   export default {
     mixins: [pagination, moduleTransitonMixin],
-    components: {NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo},
+    components: {NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo,Springbili},
     data() {
       return {
         recoShow: false,
@@ -250,7 +256,7 @@
       position relative
       box-sizing border-box
       padding 0 20px
-      height 100vh
+      height 94vh
       display flex
       align-items center
       justify-content center

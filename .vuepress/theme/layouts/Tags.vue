@@ -1,7 +1,11 @@
 <template>
   <Common :sidebar="false">
+    <div>
+        <Autumnbili></Autumnbili>
+      </div>
     <!-- 标签集合 -->
     <div class="tags-wrapper">
+      
       <ModuleTransition>
         <TagList
           v-show="recoShowModule"
@@ -39,10 +43,10 @@
   import pagination from '@theme/mixins/pagination'
   import ModuleTransition from '@theme/components/ModuleTransition'
   import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
-
+   import Autumnbili from '@theme/components/Autumnbili.vue'
   export default {
     mixins: [pagination, moduleTransitonMixin],
-    components: {Common, NoteAbstract, TagList, ModuleTransition},
+    components: {Common, NoteAbstract, TagList, ModuleTransition,Autumnbili},
     data() {
       return {
         tags: [],

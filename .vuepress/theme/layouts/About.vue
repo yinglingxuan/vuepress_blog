@@ -1,6 +1,7 @@
 <template>
   <!-- 公共布局 -->
   <Common :sidebar="false">
+   
     <div class="container">
 
       <div class="author-social">
@@ -12,7 +13,10 @@
               alt="author-avatar"
           >
         </ModuleTransition>
-
+        <div style="margin-top: -15px;">
+          <Winterbili></Winterbili>
+        </div>
+        
         <ModuleTransition delay="0.04" duration="0.5">
           <div v-if="recoShowModule" class="socials">
             <a v-if="socials.github" :href="socials.github" title="github" target="_blank"><i
@@ -50,12 +54,12 @@
 import Common from '@theme/components/Common'
 import ModuleTransition from '@theme/components/ModuleTransition'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
-
+import Winterbili from '@theme/components/Winterbili.vue'
 
 export default {
   name: 'About',
   mixins: [moduleTransitonMixin],
-  components: {Common, ModuleTransition},
+  components: {Common, ModuleTransition,Winterbili},
 
   computed: {
     socials() {
