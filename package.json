@@ -31,7 +31,6 @@
   "dependencies": {
     "aos": "^2.3.4",
     "gitalk": "^1.8.0",
-    "http-server": "^14.1.1",
     "vue-class-component": "^7.2.3",
     "vuepress-plugin-helper-live2d": "^1.0.2"
   },
