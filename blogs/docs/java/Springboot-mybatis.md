@@ -1,6 +1,6 @@
 ---
 title: Spring Boot 和 Mybatis 配置
-date: 2020-07-06
+date: 2022-07-06
 cover: https://cnd.yinglingxuan.cn/myPng/1.jpg
 tags:
  - 后端

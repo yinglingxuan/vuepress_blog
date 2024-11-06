@@ -32,6 +32,7 @@
 
 <style lang="stylus" scoped>
   @require '../styles/mode.styl'
+  
   .abstract-item
     position relative
     display inline-flex
@@ -85,7 +86,7 @@
     .title
       position: relative;
       font-size: 1.28rem;
-      line-height: 46px;
+      line-height: 30px;
       display: inline-block;
       margin 0 2rem
 
@@ -164,5 +165,19 @@
         .title
           margin 0
 
-
+    ol
+      line-height 1.7 !important
+      
+</style>
+<style >
+  .abstract p{
+    line-height: 1.7 !important;
+    /* margin: 5px !important; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    word-break: break-all; 
+    -webkit-box-orient: vertical
+  }
 </style>
