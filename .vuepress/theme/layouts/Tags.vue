@@ -33,6 +33,7 @@
           @getCurrentPage="getCurrentPage"></pagation>
       </ModuleTransition>
     </div>
+    <Footer></Footer>
   </Common>
 </template>
 
@@ -44,9 +45,10 @@
   import ModuleTransition from '@theme/components/ModuleTransition'
   import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
    import Autumnbili from '@theme/components/Autumnbili.vue'
+   import Footer from '@theme/components/Footer'
   export default {
     mixins: [pagination, moduleTransitonMixin],
-    components: {Common, NoteAbstract, TagList, ModuleTransition,Autumnbili},
+    components: {Common, NoteAbstract, TagList, ModuleTransition,Autumnbili,Footer},
     data() {
       return {
         tags: [],

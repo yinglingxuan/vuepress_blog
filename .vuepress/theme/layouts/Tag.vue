@@ -30,6 +30,7 @@
           @getCurrentPage="getCurrentPage"></pagation>
       </ModuleTransition>
     </div>
+    <Footer></Footer>
   </Common>
 </template>
 
@@ -41,10 +42,10 @@
   import ModuleTransition from '@theme/components/ModuleTransition'
   import {sortPostsByStickyAndDate, filterPosts} from '@theme/helpers/postData'
   import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
-
+import Footer from '@theme/components/Footer'
   export default {
     mixins: [pagination, moduleTransitonMixin],
-    components: {Common, NoteAbstract, TagList, ModuleTransition},
+    components: {Common, NoteAbstract, TagList, ModuleTransition,Footer},
 
     data() {
       return {

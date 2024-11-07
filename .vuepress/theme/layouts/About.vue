@@ -47,6 +47,7 @@
       </div>
 
     </div>
+    <Footer></Footer>
   </Common>
 </template>
 
@@ -55,11 +56,11 @@ import Common from '@theme/components/Common'
 import ModuleTransition from '@theme/components/ModuleTransition'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 import Winterbili from '@theme/components/Winterbili.vue'
-
+ import Footer from '@theme/components/Footer'
 export default {
   name: 'About',
   mixins: [moduleTransitonMixin],
-  components: {Common, ModuleTransition,Winterbili},
+  components: {Common, ModuleTransition,Winterbili,Footer},
 
   computed: {
     socials() {

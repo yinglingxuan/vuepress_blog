@@ -37,6 +37,7 @@
           @getCurrentPage="getCurrentPage"></pagation>
       </ModuleTransition>
     </div>
+    <Footer></Footer>
   </Common>
 </template>
 
@@ -49,9 +50,10 @@
   import {getOneColor} from '@theme/helpers/other'
   import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 import Winterbili from '@theme/components/Winterbili.vue'
+import Footer from '@theme/components/Footer'
   export default {
     mixins: [pagination, moduleTransitonMixin],
-    components: {Common, NoteAbstract, ModuleTransition,Winterbili},
+    components: {Common, NoteAbstract, ModuleTransition,Winterbili,Footer},
 
     data() {
       return {

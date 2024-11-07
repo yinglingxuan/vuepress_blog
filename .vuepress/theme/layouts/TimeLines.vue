@@ -22,6 +22,7 @@
         </ModuleTransition>
       </ul>
     </div>
+    <Footer></Footer>
   </Common>
 </template>
 
@@ -30,10 +31,11 @@
   import ModuleTransition from '@theme/components/ModuleTransition'
   import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
  import Springbili from '@theme/components/Springbili.vue'
+ import Footer from '@theme/components/Footer'
   export default {
     mixins: [moduleTransitonMixin],
     name: 'TimeLine',
-    components: {Common, ModuleTransition,Springbili},
+    components: {Common, ModuleTransition,Springbili,Footer},
     filters: {
       dateFormat(date, type) {
         function renderTime(date) {
